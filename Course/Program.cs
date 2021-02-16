@@ -111,9 +111,11 @@ namespace ConsoleApp10
                         isTrue = int.TryParse(Console.ReadLine(), out choiseUser);
                         if (!isTrue || choiseUser >= school.Students.Count || choiseUser < 0)
                             Console.WriteLine("Введите корректное число!");
+                        else
+                            school.RemoveStudent(choiseUser);
                     }
                     while (!isTrue);
-                    school.RemoveStudent(choiseUser);
+                    
                 }
 
             }
